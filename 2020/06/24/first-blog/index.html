@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/Mabota.github.io/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="肩上剩下的能量，还能撑到什么地方">
+  <meta name="description" content="使用hexo搭建博客时出现的种种问题和搭建博客时候的一些基本操作(The problem which brought when using hexo to build my blog and some basic statements) 鉴于个人之前使用hexo搭建过一个博客所以这次搭建的时候也就比较随意很多时候没有按照教程来，所以出现了很多问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first blog">
+<meta property="og:title" content="使用hexo搭建博客时出现的种种问题The problem which brought when using hexo to build blog">
 <meta property="og:url" content="http://yoursite.com/2020/06/24/first-blog/index.html">
 <meta property="og:site_name" content="Mabota&#39;s Blog">
-<meta property="og:description" content="肩上剩下的能量，还能撑到什么地方">
+<meta property="og:description" content="使用hexo搭建博客时出现的种种问题和搭建博客时候的一些基本操作(The problem which brought when using hexo to build my blog and some basic statements) 鉴于个人之前使用hexo搭建过一个博客所以这次搭建的时候也就比较随意很多时候没有按照教程来，所以出现了很多问题。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-24T03:36:09.000Z">
-<meta property="article:modified_time" content="2020-06-24T12:40:37.445Z">
+<meta property="article:modified_time" content="2020-06-24T13:17:34.461Z">
 <meta property="article:author" content="Mabota">
 <meta name="twitter:card" content="summary">
 
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>first blog | Mabota's Blog</title>
+  <title>使用hexo搭建博客时出现的种种问题The problem which brought when using hexo to build blog | Mabota's Blog</title>
   
 
 
@@ -168,7 +168,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          first blog
+          使用hexo搭建博客时出现的种种问题The problem which brought when using hexo to build blog
         </h1>
 
         <div class="post-meta">
@@ -179,7 +179,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-24 11:36:09 / Modified: 20:40:37" itemprop="dateCreated datePublished" datetime="2020-06-24T11:36:09+08:00">2020-06-24</time>
+              <time title="Created: 2020-06-24 11:36:09 / Modified: 21:17:34" itemprop="dateCreated datePublished" datetime="2020-06-24T11:36:09+08:00">2020-06-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -187,7 +187,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Mabota.github.io/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a>
+                  <a href="/Mabota.github.io/categories/Debug/" itemprop="url" rel="index"><span itemprop="name">Debug</span></a>
                 </span>
             </span>
 
@@ -202,7 +202,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>使用hexo搭建博客时出现的种种问题和搭建博客时候的一些基本操作(The problem which brought when using hexo to build my blog and some basic statements)</p>
+<p>鉴于个人之前使用hexo搭建过一个博客所以这次搭建的时候也就比较随意很多时候没有按照教程来，所以出现了很多问题。</p>
+<a id="more"></a>
+
+<ol>
+<li>第一个出现的问题就是hexo安装不上，之前有一个教程上说安装hexo使用的时间就是比较长，所以也觉得很正常，但是过了好久发现进度条基本完全不动所以开始寻找解决的方法，后来在csdn上找到了解决方法：<a href="https://blog.csdn.net/l_2581154176/article/details/91387425?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase" target="_blank" rel="noopener">文章🔗</a>。使用的方法是重新调整npm的安装，可能是版本的问题吧。</li>
+<li>之后出现的问题是，每次使用deploy的时候都要输入密码，超级烦人，但是我其实已经使用SSH key和我的github进行绑定了之后查询到的原因可能由两个，<ul>
+<li>首先查询到的问题是即使上传了SSH-key但是调用仓库的时候使用的是https的方法进行克隆或者调用的所以这个时候需要使用使用ssh的方法克隆仓库，之后发现在主目录下的config.yml文件中的链接尾部加上,git就可以了，写到这里想起来刚开始在config.yml文件中添加链接应该使用仓库的链接而不是博客的链接，这一点刚开始一直没有注意到。</li>
+<li>之后发现还是有时候需要填写密码和账号，不过只是偶尔会出现这样的问题。之后查询可能是由于Github禁用了某个凭证，所以需要更新windows的git凭证管理，<a href="https://blog.csdn.net/sinat_29047129/article/details/105121459" target="_blank" rel="noopener">fatal:httprequestexception encountered解决方案</a> </li>
+</ul>
+</li>
+<li>最后出现的问题是上传博客之后博客界面始终不能加载出CSS文件来，也就是没有网站的框架导致整个页面一片空白，之后在CSDN的一个博客里找到了解决方法，<a href="https://blog.csdn.net/weixin_42971942/article/details/88623749" target="_blank" rel="noopener">解决hexo无法加载css文件的方案</a>特别注意的是其中的的blog位置应该是自己仓库的名字往往是XXX.io，再就是前后的斜杠都不能省略。</li>
+</ol>
+<p>搭建博客整整用了一晚上加一早上的时候，过程中还出现和很多小的bug这里就不记录了，总之总算完成了从无到有的这一步。至此自己的博客算是搭建起来了，但是很多东西还没有调整，之后的问题可以一步步解决一步步调整。自己前一段时间的学习效率实在是不高，浪费了很多时间完全赶不上进度，搭建博客的初衷是能够在短期内记录自己的一些进步和学习的感悟，能够实时的给自己的学习增加一点反馈。希望不管在什么时候都能牢记自己的初心踏实走好每一步。</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">搭建blog的参考教程</a></li>
+<li><a href="https://sspai.com/post/54912" target="_blank" rel="noopener">Typora的一些使用指导</a></li>
+<li>搭建博客时常用的三个操作  <code>hexo clean</code> 这个是用来清除本地缓存的， <code>hexo g</code> 这个是用来在本地生成静态网页的，<code>hexo d</code> 这个向GitHub提交文件的语句。</li>
+</ul>
+
     </div>
 
     
